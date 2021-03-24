@@ -17,7 +17,9 @@ const Paginator = (props) => {
                 break;
               }else{
                 disabledButton();
-                pages.push(<span key={i} onClick={()=>{props.getPopularMovie(i)}} className={style.numberPages}>{i}</span>);
+                pages.push(<span key={i} onClick={()=>{props.getPopularMovie(i)}}
+                                 className={style.numberPages}
+                                 style={props.page === i? {backgroundColor: "#272F8B"} : {backgroundColor: "#030431"}} >{i}</span>);
               }
          }
 

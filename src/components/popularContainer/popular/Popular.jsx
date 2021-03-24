@@ -18,6 +18,7 @@ const Popular = (props) => {
             <Paginator 
                     totalPages={props.totalPages}
                     currentPage={props.currentPage}
+                    page={props.page}
                     countMovie={props.popularMovie.length}
                     setNewPagesNumber={props.setNewPagesNumber}
                     nextButtonDisabled={props.nextButtonDisabled}
