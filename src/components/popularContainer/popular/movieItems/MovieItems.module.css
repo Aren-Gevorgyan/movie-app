@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    width: 60%;
+}
+
+.container div {
+    flex: 1;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.container div img {
+    width: 100px;
+}

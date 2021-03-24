@@ -1,3 +1,4 @@
 .container {
-    background-color: teal;
+    flex: 4;
+    flex-wrap: wrap;
 }
