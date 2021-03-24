@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    height: 5px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.container span {
+    font-weight: bold;
+    font-size: 6px;
+    flex: 1;
+    text-align: center;
+}
+
+.progressContainer {
+    flex: 5;
+    height: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.progress {
+    height: 5px;
+    border-radius: 4px;
+}

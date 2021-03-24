@@ -6,7 +6,10 @@ const instanceAxios = axios.create({
 
 const getPopularMovie = () => {
     return instanceAxios.get('discover/movie?sort_by=popularity.desc&api_key=8cdd9fff7ba2a5254932216a82dee30e')
-        .then(res => res.data.results);
+        .then(res => {
+            console.log(res);
+            return res.data.results
+        });
 }
 
 export const popularApi = {
