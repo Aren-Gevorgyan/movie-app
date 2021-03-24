@@ -2,10 +2,11 @@ import React from 'react';
 import {compose} from 'redux';
 import Popular from './popular/Popular';
 import {connect} from 'react-redux';
+import {getPopularMovieThunk} from '../../store/reduce/popularMovieReduce';
 
 class PopularContainer extends React.Component{
       componentDidMount(){
-
+         this.props.getPopularMovieThunk();
       }
       
       render(){
@@ -20,5 +21,5 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps)
+    connect(mapStateToProps, {getPopularMovieThunk})
 )(PopularContainer);
