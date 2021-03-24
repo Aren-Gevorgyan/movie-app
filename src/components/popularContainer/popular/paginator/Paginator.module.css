@@ -28,6 +28,7 @@
 }
 
 .numberPages:hover {
+    cursor: context-menu;
     background-color: #272F8B;
 }
 

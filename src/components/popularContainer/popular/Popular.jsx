@@ -25,7 +25,8 @@ const Popular = (props) => {
                     prevButtonDisabled={props.prevButtonDisabled}
                     setDisabledNext={props.setDisabledNext}
                     setDisabledPrev={props.setDisabledPrev}
-                    getPopularMovie={props.getPopularMovie}/>
+                    getPopularMovie={props.getPopularMovie}
+                    toDoLoading={props.toDoLoading}/>
 
             <div className={style.movie}>
                {movieItems}

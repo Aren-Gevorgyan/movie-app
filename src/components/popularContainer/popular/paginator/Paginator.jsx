@@ -8,6 +8,22 @@ const Paginator = (props) => {
     let lastPage = props.currentPage.lastPage;  
  
     const countPage = Math.ceil(props.totalPages / props.countMovie);
+
+    const clickPage = (numberPage) => {
+      props.toDoLoading(true);
+      props.getPopularMovie(numberPage);
+    }
+
+    const disabledButton = (firstPage, lastPage) => {
+        const ifPageNumberLessOfOne = firstPage <= 1;
+        const ifNoPageNumber = countPage <= lastPage;
+
+        if(ifPageNumberLessOfOne){ 
+            props.setDisabledNext(true);
+        }else if (ifNoPageNumber){
+            props.setDisabledPrev(true);
+        }
+    }
     
     //create pages
     (() => {
@@ -16,22 +32,11 @@ const Paginator = (props) => {
               if(i > lastPage){
                 break;
               }else{
-                disabledButton();
-                pages.push(<span key={i} onClick={()=>{props.getPopularMovie(i)}}
+                disabledButton(firstPage, lastPage);
+                pages.push(<span key={i} onClick={()=>{clickPage(i)}}
                                  className={style.numberPages}
                                  style={props.page === i? {backgroundColor: "#272F8B"} : {backgroundColor: "#030431"}} >{i}</span>);
               }
-         }
-
-         function disabledButton() {
-            const ifPageNumberLessOfOne = firstPage <= 1;
-            const ifNoPageNumber = countPage <= lastPage;
-
-            if(ifPageNumberLessOfOne){ 
-                props.setDisabledNext(true);
-            }else if (ifNoPageNumber){
-                props.setDisabledPrev(true);
-           }
          }
 
     })();

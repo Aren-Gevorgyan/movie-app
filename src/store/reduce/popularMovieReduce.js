@@ -4,6 +4,7 @@ const POPULAR = "POPULAR";
 const SET_NEW_PAGES_NUMBER = "SET_NEW_PAGES_NUMBER";
 const DISABLED_NEXT = "DISABLED NEXT";
 const DISABLED_PREV = "DISABLED PREV";
+const LOADING = "LOADING";
 
 const initialState = {
     movieItems: [],
@@ -12,6 +13,7 @@ const initialState = {
     currentPage: { firstPage: 1, lastPage: 4 },
     prevButtonDisabled: true,
     nextButtonDisabled: false,
+    loading: false,
 }
 
 const popularReduce = (state = initialState, action) => {
@@ -23,7 +25,9 @@ const popularReduce = (state = initialState, action) => {
         case DISABLED_PREV:
             return {...state, nextButtonDisabled: action.disabled }
         case DISABLED_NEXT:
-            return {...state, prevButtonDisabled: action.disabled }
+            return {...state, prevButtonDisabled: action.disabled };
+        case LOADING:
+            return {...state, loading: action.loading }
         default:
             return state;
     }
@@ -33,11 +37,13 @@ const setMovieItems = (movieItems, page, totalPages) => ({ type: POPULAR, movieI
 export const setNewPagesNumber = (newPagesNumber) => ({ type: SET_NEW_PAGES_NUMBER, newPagesNumber });
 export const setDisabledPrev = (disabled) => ({ type: DISABLED_PREV, disabled });
 export const setDisabledNext = (disabled) => ({ type: DISABLED_NEXT, disabled });
+export const toDoLoading = (loading) => ({ type: LOADING, loading })
 
 export const getPopularMovie = (pageNumber) => {
     return (dispatch) => {
         popularApi.getPopularMovie(pageNumber).then(data => {
-            dispatch(setMovieItems(data.results, data.page, data.total_pages))
+            dispatch(setMovieItems(data.results, data.page, data.total_pages));
+            dispatch(toDoLoading(false));
         })
     }
 }
