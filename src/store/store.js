@@ -1,11 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import popularMovieReduce from '../store/reduce/popularMovieReduce';
-import headerReduce from '../store/reduce/headerReduce';
+import navbarReduce from '../store/reduce/navbarReduce';
 import middleware from 'redux-thunk';
 
 const reduce = combineReducers({
     popularMovie: popularMovieReduce,
-    header: headerReduce,
+    navbar: navbarReduce,
 })
 
 const store = createStore(reduce, applyMiddleware(middleware));

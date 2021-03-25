@@ -1,20 +1,20 @@
 import React from 'react';
 import {compose} from 'redux';
-import Header from './header/Header';
+import Navbar from './navbar/Navbar';
 import {connect} from 'react-redux';
 
-class HeaderContainer extends React.Component{
+class NavbarContainer extends React.Component{
       render(){
-          return <Header {...this.props}/>
+          return <Navbar {...this.props}/>
       }
 }
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.header.menu,
+        menu: state.navbar.menu,
     }
 }
 
 export default compose(
     connect(mapStateToProps)
-)(HeaderContainer);
+)(NavbarContainer);
