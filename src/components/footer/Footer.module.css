@@ -1,0 +1,57 @@
+footer {
+    width: 100%;
+    height: 150px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #111544;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.logo p {
+    margin-left: 4px;
+    font-size: 9px;
+    color: white;
+}
+
+.contact ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contact ul li {
+    color: white;
+    list-style-type: none;
+    font-size: 9px;
+    margin: 4px 0;
+}
+
+.contact ul li h4 {
+    font-size: 16px;
+}
+
+.contact ul li span {
+    font-size: 10px;
+}
+
+.contact ul li span i {
+    color: white;
+}

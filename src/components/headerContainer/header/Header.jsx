@@ -10,16 +10,19 @@ const Header = (props) => {
     })
 
     return (
+
         <header>
-
-            <div className={style.logo}>
+           
+           <div className={style.container}>
+              <div className={style.logo}>
                 <img src={logo} alt='logo'/>
-            </div>
+              </div>
 
-            <div className={style.menu}>
+              <div className={style.menu}>
                 <ul>
                     {menuItem}
                 </ul>
+              </div>
             </div>
 
         </header>

@@ -39,8 +39,9 @@
     font-weight: bold;
     outline: none;
     margin: 0 1px;
-    border: 1px solid #030431;
     border-radius: 2px;
+    color: #030431;
+    border: 1px solid #030431;
 }
 
 .previous:hover,

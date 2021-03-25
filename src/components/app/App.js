@@ -4,6 +4,7 @@ import style from './App.module.css';
 import { Route } from 'react-router-dom';
 import PopularContainer from '../popularContainer/PopularContainer.jsx';
 import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 const App = () => {
 
@@ -18,8 +19,10 @@ const App = () => {
         <
         Navbar / >
         <
-        Route path = '/' > < PopularContainer / > < /Route>  <
+        Route path = '/' > < PopularContainer / > < /Route>   <
         /div> <
+        Footer / >
+        <
         /div>
     )
 }

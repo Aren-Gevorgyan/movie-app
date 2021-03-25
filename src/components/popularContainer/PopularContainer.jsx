@@ -8,7 +8,7 @@ import Loading from '../common/loading/Loading';
 
 class PopularContainer extends React.Component{
       componentDidMount(){
-         
+         this.props.toDoLoading(true);
          this.props.getPopularMovie(this.props.page);
       }
       
