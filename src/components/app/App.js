@@ -10,14 +10,21 @@ const App = () => {
 
     return (
 
-        <div className = { style.container } >
-           <Header/>
-           <div>
-               <NavbarContainer/>
-               <Route path = '/'> < PopularContainer /> </Route>  
-            </div>
-            <Footer/> 
-        </div>
+        <
+        div id = { 'demo' }
+        className = { style.container } >
+        <
+        Header / >
+        <
+        div >
+        <
+        NavbarContainer / >
+        <
+        Route path = '/' > < PopularContainer / > < /Route>   <
+        /div> <
+        Footer / >
+        <
+        /div>
     )
 }
 

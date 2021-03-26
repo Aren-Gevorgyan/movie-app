@@ -2,18 +2,12 @@ import React from 'react';
 import {compose} from 'redux';
 import Popular from './popular/Popular';
 import {connect} from 'react-redux';
-import {getPopularMovie, setNewPagesNumber,
-        setDisabledNext, setDisabledPrev, toDoLoading} from '../../store/reduce/popularMovieReduce';
+import {getPopularMovie} from '../../store/reduce/popularMovieReduce';
 import Loading from '../common/loading/Loading';
 
-class PopularContainer extends React.Component{
-      componentDidMount(){
-         this.props.toDoLoading(true);
-         this.props.getPopularMovie(this.props.page);
-      }
-      
+class PopularContainer extends React.Component{    
       render(){
-          return this.props.loading? <Loading/> : <Popular {...this.props} />
+          return <Popular {...this.props} />
       }
 }
 
@@ -30,5 +24,5 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {getPopularMovie, setNewPagesNumber, setDisabledNext, setDisabledPrev, toDoLoading})
+    connect(mapStateToProps, {getPopularMovie})
 )(PopularContainer);
