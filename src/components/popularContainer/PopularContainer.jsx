@@ -3,12 +3,15 @@ import {compose} from 'redux';
 import Popular from './popular/Popular';
 import {connect} from 'react-redux';
 import {getPopularMovie} from '../../store/reduce/popularMovieReduce';
-import Loading from '../common/loading/Loading';
 
 class PopularContainer extends React.Component{    
-      render(){
-          return <Popular {...this.props} />
-      }
+    componentDidMount(){
+        this.props.getPopularMovie(this.props.page);
+    }
+    
+    render(){
+        return <Popular {...this.props} />
+    }
 }
 
 const mapStateToProps = (state) => {

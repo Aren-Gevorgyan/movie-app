@@ -17,8 +17,8 @@ const Footer = () => {
               <div className={style.contact}>
                  <ul>
                      <li><h4>Our Contacts</h4></li>
-                     <li><span><i class='far fa-paper-plane'/> Email: </span> areng4518@gmail.com</li>
-                     <li><span><i class='fas fa-phone-square-alt'/> Phone number: </span>(+374) 94 03-34-56</li>
+                     <li><span><i className='far fa-paper-plane'/> Email: </span> areng4518@gmail.com</li>
+                     <li><span><i className='fas fa-phone-square-alt'/> Phone number: </span>(+374) 94 03-34-56</li>
                  </ul>
               </div>
             </div>

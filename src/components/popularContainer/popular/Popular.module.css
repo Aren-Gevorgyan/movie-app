@@ -1,5 +1,6 @@
 .container {
     flex: 4;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
