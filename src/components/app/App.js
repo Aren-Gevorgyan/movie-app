@@ -8,21 +8,23 @@ import Footer from '../footer/Footer';
 
 const App = () => {
 
-    window.onscroll = () => {
-        if (window.pageYOffset > 350) {
-          }
-    };
-
     return (
 
-        <div id={'demo'} className = { style.container } >
-           <Header/>
-           <div>
-               <NavbarContainer/>
-               <Route path = '/'> < PopularContainer /> </Route>  
-            </div>
-            <Footer/> 
-        </div>
+        <
+        div id = { 'demo' }
+        className = { style.container } >
+        <
+        Header / >
+        <
+        menu >
+        <
+        NavbarContainer / >
+        <
+        Route path = '/' > < PopularContainer / > < /Route> < /
+        menu > <
+        Footer / >
+        <
+        /div>
     )
 }
 

@@ -1,6 +1,7 @@
 import style from './Header.module.css';
 import React from 'react';
 import logo from '../../assets/images/logo.png';
+import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
     
@@ -12,6 +13,15 @@ const Header = (props) => {
               <div className={style.logo}>
                 <img src={logo} alt='logo'/>
               </div>
+              <nav>
+                <ul>
+                  <li>Movies
+                   <ul className={style.popular}>
+                     <li>Popular</li>
+                   </ul>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
         </header>
