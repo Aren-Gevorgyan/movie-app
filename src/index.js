@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/app/App';
+import App from './components/app/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import store from './store/store';
 import { Provider } from 'react-redux';
@@ -18,9 +18,9 @@ ReactDOM.render(
     <
     App / >
     <
-    /Provider>  < /
-    BrowserRouter > < /
-    React.StrictMode > ,
+    /Provider>   <
+    /BrowserRouter >  <
+    /React.StrictMode > ,
     document.getElementById('root')
 
 );

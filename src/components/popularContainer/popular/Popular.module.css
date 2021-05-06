@@ -10,3 +10,17 @@
     flex-wrap: wrap;
     margin-top: 80px;
 }
+
+.loadMore {
+    width: 80%;
+    height: 34px;
+    margin-left: 4%;
+    background-color: rgb(33, 147, 192);
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+}

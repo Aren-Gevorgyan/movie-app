@@ -1,9 +1,9 @@
 import style from './Header.module.css';
 import React from 'react';
-import logo from '../../assets/images/logo.png';
+import logo from '../../../assets/images/logo.png';
 
-const Header = (props) => {
-    
+const Header = ({getInitialMovie}) => {
+
     return (
 
         <header>
@@ -16,7 +16,7 @@ const Header = (props) => {
                 <ul>
                   <li>Movies
                    <ul className={style.popular}>
-                     <li>Popular</li>
+                     <li onClick={()=>getInitialMovie()}>Popular</li>
                    </ul>
                   </li>
                 </ul>
