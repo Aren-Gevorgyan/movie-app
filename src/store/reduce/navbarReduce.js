@@ -1,7 +1,5 @@
 const initialState = {
-    menu: [
-        { id: 1, name: "Popular", path: "" },
-    ]
+
 }
 
 const navbarReduce = (state = initialState, action) => {

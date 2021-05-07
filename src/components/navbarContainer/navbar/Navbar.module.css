@@ -1,9 +1,9 @@
 aside {
     flex: 1;
-    margin-top: 80px
+    margin-top: 80px;
 }
 
-aside h2 {
+aside>h2 {
     font-size: 15px;
     margin-top: 6px;
     color: #28282A;
@@ -12,33 +12,14 @@ aside h2 {
 
 .menu {
     margin-top: 1px;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid black;
 }
 
-.menu ul {
+.menu>ul {
     width: 60%;
-    position: absolute;
-    right: 0px;
     padding: 5px;
+    position: relative;
     border: 1px solid gray;
-}
-
-.menuItem {
-    color: #28282A;
-    text-decoration: none;
-}
-
-.menuItem:hover {
-    color: #5B5B5E;
-    font-weight: bold;
-}
-
-.menuItem li {
-    font-size: 14px;
-    list-style-type: none;
-}
-
-.active {
-    color: #5B5B5E;
-    font-weight: bold;
 }
