@@ -1,10 +1,10 @@
 import { popularApi } from '../../dal/api';
 
-const POPULAR = "POPULAR";
-const INCREMENT_PAGE = "INCREMENT PAGE";
-const LOADING = "LOADING";
-const INITIAL_STATE = "INITIAL_STATE";
-const LOAD_MORE = "LOAD MORE";
+const POPULAR = "popular/POPULAR";
+const INCREMENT_PAGE = "popular/INCREMENT PAGE";
+const LOADING = "popular/LOADING";
+const INITIAL_STATE = "popular/INITIAL_STATE";
+const LOAD_MORE = "popular/LOAD MORE";
 
 const initialState = {
     movieItems: [],

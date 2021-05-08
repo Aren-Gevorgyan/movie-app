@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import style from './Filter.module.css';
+import FilterForm from './filterForm/FilterForm';
 
 const Filter = (props) => {
     const [filterDialog, openFilterDialog] = useState(false);
@@ -12,9 +13,7 @@ const Filter = (props) => {
             </li>
             
             {filterDialog?
-                <div className={style.filterByYear}>
-                  <input type='date'/>
-                </div> 
+                <FilterForm/>
              : ""}
         </div>
     )

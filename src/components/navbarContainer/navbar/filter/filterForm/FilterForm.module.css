@@ -1,0 +1,13 @@
+.filterByYear {
+    width: 100%;
+    top: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgb(192, 190, 190);
+    background-color: rgb(190, 219, 253);
+}
+
+.filterByYear>input {
+    font-size: 10px;
+}
