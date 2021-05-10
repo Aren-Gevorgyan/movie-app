@@ -3,6 +3,7 @@ import {compose} from 'redux';
 import Popular from './popular/Popular';
 import {connect} from 'react-redux';
 import {getPopularMovie, setLoadMore} from '../../store/reduce/popularMovieReduce';
+import {getMovieItems, getPage, getLoading, getLoadMore} from '../../store/reduce/popularMovieSelector';
 
 class PopularContainer extends React.Component{    
     componentDidMount(){
@@ -16,14 +17,10 @@ class PopularContainer extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-        popularMovie: state.popularMovie.movieItems,
-        currentPage: state.popularMovie.currentPage,
-        page: state.popularMovie.page,
-        totalPages: state.popularMovie.totalPages,
-        nextButtonDisabled: state.popularMovie.nextButtonDisabled,
-        prevButtonDisabled: state.popularMovie.prevButtonDisabled,
-        loading: state.popularMovie.loading,
-        loadMore: state.popularMovie.loadMore,
+        popularMovie: getMovieItems(state),
+        page: getPage(state),
+        loading: getLoading(state),
+        loadMore: getLoadMore(state),
     }
 }
 
