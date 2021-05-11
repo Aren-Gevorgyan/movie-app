@@ -13,3 +13,15 @@ export const getLoading = (state) => {
 export const getLoadMore = (state) => {
     return state.popularMovie.loadMore;
 }
+
+export const getMovieType = (state) => {
+    return state.popularMovie.movieType;
+}
+
+export const getDateFrom = (state) => {
+    return state.popularMovie.dateFrom;
+}
+
+export const getDateTo = (state) => {
+    return state.popularMovie.dateTo;
+}

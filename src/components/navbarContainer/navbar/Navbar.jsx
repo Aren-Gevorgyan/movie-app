@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Navbar.module.css';
 import Filter from './filter/Filter';
 
-const Navbar = (props) => {
+const Navbar = ({watchMovieByYear, page}) => {
 
     return (
 
@@ -10,7 +10,7 @@ const Navbar = (props) => {
               <h2>Popular Movies</h2>
               <div className={style.menu}>
                  <ul>
-                    <Filter/>
+                    <Filter watchMovieByYear={watchMovieByYear} page={page}/>
                  </ul>
               </div>
         </aside>

@@ -2,19 +2,21 @@ import React from 'react';
 import style from './FilterForm.module.css';
 import {Field, reduxForm} from 'redux-form';
 
-const Form = ({type}) => {
+const Form = ({type, component, name, description}) => {
     return (
-        <div className={style.filterByYear}>
-            <Field type={type} component="input"/>
-        </div> 
+            <label>{description}
+              <Field name={name} type={type} component={component}/>
+            </label>
     )
 }
 
 const FilterForm = (props) => {
-
+    
     return (
-           <form onSubmit={props.heandleSubbmit}>
-              <Form type="date"/>
+           <form onSubmit={props.handleSubmit} className={style.filterByYear}>
+              <Form type="date" component="input" name="dateFrom" description="from"/>
+              <Form type="date" component="input" name="dateTo" description="to"/>
+              <button type='submit'>Search</button>
            </form>
     )
 }

@@ -2,8 +2,13 @@ import React, {useState} from 'react';
 import style from './Filter.module.css';
 import FilterForm from './filterForm/FilterForm';
 
-const Filter = (props) => {
+const Filter = ({watchMovieByYear, page}) => {
     const [filterDialog, openFilterDialog] = useState(false);
+
+    const getFilterByYearValue = (value) => {
+        watchMovieByYear(page, value.dateFrom, value.dateTo);
+        openFilterDialog(!filterDialog);
+    }
   
     return (
         <div>
@@ -13,7 +18,7 @@ const Filter = (props) => {
             </li>
             
             {filterDialog?
-                <FilterForm/>
+                <FilterForm onSubmit={getFilterByYearValue}/>
              : ""}
         </div>
     )
