@@ -10,9 +10,9 @@ const Popular = ({popularMovie, ...props}) => {
 
     const getContainerElement = useRef(null);
     const ifNotMovies = popularMovie.length === 0;
-    const setPaddingContainer = ifNotMovies? "230px" : "0px";
 
     useEffect(()=>{
+        const setPaddingContainer = ifNotMovies? "230px" : "0px";
         getContainerElement.current.style.paddingBottom = setPaddingContainer;
     }, [ifNotMovies]);
 

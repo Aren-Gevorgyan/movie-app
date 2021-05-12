@@ -3,6 +3,11 @@ import React from 'react';
 import logo from '../../../assets/images/logo.png';
 
 const Header = ({getInitialMovie}) => {
+    
+    const getPopularMovie = () => {
+        window.scrollTo( 0, 0);
+        getInitialMovie()
+    }
 
     return (
 
@@ -16,7 +21,7 @@ const Header = ({getInitialMovie}) => {
                 <ul>
                   <li>Movies
                    <ul className={style.popular}>
-                     <li onClick={()=>getInitialMovie()}>Popular</li>
+                     <li onClick={getPopularMovie}>Popular</li>
                    </ul>
                   </li>
                 </ul>

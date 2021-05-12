@@ -17,9 +17,11 @@ const Progress = (props) => {
     return (  
 
            <div className={style.container}>
-
+              <span className={style.popularity}>Popularity</span> 
               <div className={style.progressContainer}>
-                  <div className={style.progress} style={{width: `${popularity[0]}%`, backgroundColor: popularity[1]}}></div>
+                  <div className={style.progress} 
+                       style={{width: `${popularity[0]}%`,
+                              backgroundColor: popularity[1]}}></div>
               </div>
 
               <span>{popularity[0]}%</span>

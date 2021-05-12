@@ -54,17 +54,13 @@ nav>ul>li:hover ul {
 
 .popular {
     width: 80px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 100%;
     left: 0;
     padding: 5px;
     box-sizing: border-box;
-    background-color: rgb(233, 233, 233);
     border-radius: 2px;
+    background-color: rgb(233, 233, 233);
     border: 1px solid rgb(209, 207, 207);
     display: none;
 }
