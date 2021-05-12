@@ -20,5 +20,6 @@ aside>h2 {
     width: 60%;
     padding: 5px;
     position: relative;
-    border: 1px solid gray;
+    border-left: 1px solid #2a36b9;
+    border-bottom: 1px solid #2a36b9;
 }
