@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {compose} from 'redux';
 import Popular from './popular/Popular';
 import {connect} from 'react-redux';
@@ -8,14 +8,13 @@ import {getMovieItems, getPage, getLoading,
         getLoadMore, getMovieType, getDateFrom,
         getDateTo} from '../../store/reduce/popularMovieSelector';
 
-class PopularContainer extends React.Component{    
-    componentDidMount(){
-        this.props.getPopularMovie(this.props.page);
-    }
+const PopularContainer = (props) => {
+
+    useEffect(()=>{
+        props.getPopularMovie(props.page);
+    },[]);
     
-    render(){
-        return <Popular {...this.props} />
-    }
+    return <Popular {...props} />   
 }
 
 const mapStateToProps = (state) => {
