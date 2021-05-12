@@ -19,7 +19,7 @@ const Popular = (props) => {
                   <div className={style.movie}>{movieItems}</div>
                   <button onClick={()=>props.setLoadMore(!props.loadMore)}
                         className={style.loadMore}> Load More
-                   </button>
+                  </button>
                 </> 
                 :
                 <InfiniteScroll
@@ -40,7 +40,9 @@ function newMovieType(type, getPopularMovie, getNewMovieByYear){
         case TYPE_POPULAR:
             return getPopularMovie;
         case TYPE_ByYEAR:
-            return getNewMovieByYear;         
+            return getNewMovieByYear;  
+        default:
+            break;       
     };
 }
 

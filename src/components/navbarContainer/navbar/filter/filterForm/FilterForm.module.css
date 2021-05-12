@@ -27,5 +27,12 @@
 }
 
 .filterByYear>button {
-    font-size: 6px;
+    width: 100%;
+    font-size: 8px;
+    padding: 2px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgb(33, 147, 192);
+    border: none;
+    border-radius: 2px;
 }
