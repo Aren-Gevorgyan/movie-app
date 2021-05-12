@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import style from './Filter.module.css';
 import FilterForm from './filterForm/FilterForm';
+import Genres from './genres/Genres';
 
-const Filter = ({watchMovieByYear, page}) => {
+const Filter = React.memo(({watchMovieByYear, page, genresItem}) => {
+
     const [filterDialog, openFilterDialog] = useState(false);
     const [arrowIcon, setArrowIcon] = useState('fas fa-angle-right');
 
@@ -31,10 +33,13 @@ const Filter = ({watchMovieByYear, page}) => {
             </li>
             
             {filterDialog?
+              <div className={style.dialogFilter}>
                 <FilterForm onSubmit={getFilterByYearValue}/>
+                <Genres genresItem={genresItem}/>
+              </div>   
              : ""}
         </div>
     )
-}
+})
   
 export default Filter;

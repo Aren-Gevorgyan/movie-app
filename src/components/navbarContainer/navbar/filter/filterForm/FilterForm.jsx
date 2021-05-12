@@ -16,6 +16,7 @@ const FilterForm = (props) => {
     
     return (
            <form onSubmit={props.handleSubmit} className={style.filterByYear}>
+              <h5>Release Dates</h5>
               <Form searchMovie={searchMovie} type="date" component="input" name="dateFrom" description="from"/>
               <Form type="date" component="input" name="dateTo" description="to"/>
               {searchByYear?

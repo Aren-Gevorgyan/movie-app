@@ -1,12 +1,12 @@
 .filterByYear {
-    width: 100%;
-    top: 100%;
     padding: 5px;
     box-sizing: border-box;
-    position: absolute;
-    border-left: 1px solid #2a36b9;
-    border-bottom: 1px solid #2a36b9;
     background-color: rgb(227, 237, 248);
+}
+
+.filterByYear>h5 {
+    margin: 0 0 8px 0;
+    color: #797b8f;
 }
 
 .filterByYear>label {

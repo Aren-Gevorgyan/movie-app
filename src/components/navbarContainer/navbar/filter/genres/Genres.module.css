@@ -1,0 +1,29 @@
+.container {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.container>h5 {
+    margin: 0 0 8px 0;
+    color: #797b8f;
+}
+
+.genresItemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genresItems {
+    font-size: 10px;
+    color: gray;
+    padding: 4px;
+    margin: 4px 4px 4px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid rgb(33, 147, 192);
+}
+
+.genresItems:hover {
+    color: white;
+    background-color: rgb(33, 147, 192);
+}

@@ -67,6 +67,8 @@ nav>ul>li:hover ul {
 
 .popular>li {
     width: 70%;
+    padding: 4px;
+    box-sizing: border-box;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -76,5 +78,5 @@ nav>ul>li:hover ul {
 }
 
 .popular>li:hover {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(185, 184, 184);
 }

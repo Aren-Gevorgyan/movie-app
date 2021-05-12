@@ -13,3 +13,12 @@
 .menuItem:hover {
     color: #5050e2;
 }
+
+.dialogFilter {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    border-left: 1px solid #2a36b9;
+    border-bottom: 1px solid #2a36b9;
+}
