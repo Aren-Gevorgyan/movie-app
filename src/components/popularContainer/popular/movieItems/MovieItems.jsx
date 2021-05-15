@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './MovieItems.module.css';
-import Progress from './progress/Progress';
+import Progress from './progress/Progress.jsx';
 
-const img_api = "https://image.tmdb.org/t/p/w500"
+const imgApi = "https://image.tmdb.org/t/p/w500";
 
 const MovieItems = (props) => {
 
@@ -10,7 +10,7 @@ const MovieItems = (props) => {
 
         <div className={style.container}>
 
-            <img src={img_api + props.poster} alt='moviePhoto' />
+            <img src={imgApi + props.poster} alt='moviePhoto' />
 
             <div className={style.description}>
 

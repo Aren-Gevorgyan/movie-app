@@ -32,6 +32,7 @@
         "comma-dangle": "off",
         "quotes": "off",
         "prefer-template": "off",
-        "padded-blocks": "off"
+        "padded-blocks": "off",
+        "arrow-body-style": "off"
     }
 }
