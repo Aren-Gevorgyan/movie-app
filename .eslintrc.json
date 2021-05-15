@@ -33,6 +33,11 @@
         "quotes": "off",
         "prefer-template": "off",
         "padded-blocks": "off",
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
+        "space-infix-ops": "off",
+        "arrow-spacing": "off",
+        "arrow-parens": "off",
+        "operator-linebreak": "off",
+        "no-nested-ternary": "off"
     }
 }
