@@ -39,6 +39,7 @@
         "arrow-parens": "off",
         "operator-linebreak": "off",
         "no-nested-ternary": "off",
-        "object-curly-spacing": "off"
+        "object-curly-spacing": "off",
+        "import/first": "off"
     }
 }

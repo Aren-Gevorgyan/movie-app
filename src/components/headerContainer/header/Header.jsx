@@ -1,36 +1,36 @@
-import style from './Header.module.css';
 import React from 'react';
+import style from './Header.module.css';
 import logo from '../../../assets/images/logo.png';
 
-const Header = ({getInitialMovies}) => {
-    
-    const getPopularMovie = () => {
-        window.scrollTo( 0, 0);
-        getInitialMovies()
-    }
+const Header = ({ getInitialMovies }) => {
 
-    return (
+  const getPopularMovie = () => {
+    window.scrollTo(0, 0);
+    getInitialMovies()
+  }
 
-        <header>
-           
-           <div className={style.container}>
-              <div className={style.logo}>
-                <img src={logo} alt='logo'/>
-              </div>
-              <nav>
-                <ul>
-                  <li>Movies
+  return (
+
+    <header>
+
+      <div className={style.container}>
+        <div className={style.logo}>
+          <img src={logo} alt='logo' />
+        </div>
+        <nav>
+          <ul>
+            <li>Movies
                    <ul className={style.popular}>
-                     <li onClick={getPopularMovie}>Popular</li>
-                   </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+                <li onClick={getPopularMovie}>Popular</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        </header>
-    )
+    </header>
+  )
 }
 
-  
+
 export default Header;

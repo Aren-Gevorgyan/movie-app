@@ -1,7 +1,7 @@
-import Navbar from './navbar/Navbar';
-import {connect} from 'react-redux';
-import {watchMoviesByYear} from '../../store/reduce/popularMovieReduce';
-import {getPage} from '../../store/reduce/popularMovieSelector';
+import { connect } from 'react-redux';
+import Navbar from './navbar/Navbar.jsx';
+import { watchMoviesByYear } from '../../store/reduce/popularMovieReduce';
+import { getPage } from '../../store/reduce/popularMovieSelector';
 import getGenresItem from '../../store/reduce/navbarSelector';
 
 const mapStateToProps = (state) => {
@@ -11,4 +11,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {watchMoviesByYear})(Navbar);
+export default connect(mapStateToProps, { watchMoviesByYear })(Navbar);
