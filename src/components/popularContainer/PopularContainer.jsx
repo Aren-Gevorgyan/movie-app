@@ -1,20 +1,24 @@
-import React, {useEffect} from 'react';
-import {compose} from 'redux';
-import Popular from './popular/Popular';
-import {connect} from 'react-redux';
-import {getPopularMovies, setLoadMore,
-      getNewMoviesByYear} from '../../store/reduce/popularMovieReduce';
-import {getMovieItems, getPage, getLoading,
-        getLoadMore, getMoviesType, getDateFrom,
-        getDateTo} from '../../store/reduce/popularMovieSelector';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import Popular from './popular/Popular.jsx';
+import {
+    getPopularMovies, setLoadMore,
+    getNewMoviesByYear
+} from '../../store/reduce/popularMovieReduce';
+import {
+    getMovieItems, getPage, getLoading,
+    getLoadMore, getMoviesType, getDateFrom,
+    getDateTo
+} from '../../store/reduce/popularMovieSelector';
 
 const PopularContainer = (props) => {
 
-    useEffect(()=>{
+    useEffect(() => {
         props.getPopularMovies(props.page);
-    },[]);
-    
-    return <Popular {...props} />   
+    }, []);
+
+    return <Popular {...props} />
 }
 
 const mapStateToProps = (state) => {
@@ -30,5 +34,5 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {getPopularMovies, setLoadMore, getNewMoviesByYear})
+    connect(mapStateToProps, { getPopularMovies, setLoadMore, getNewMoviesByYear })
 )(PopularContainer);
