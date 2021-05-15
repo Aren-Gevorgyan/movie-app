@@ -40,6 +40,8 @@
         "operator-linebreak": "off",
         "no-nested-ternary": "off",
         "object-curly-spacing": "off",
-        "import/first": "off"
+        "import/first": "off",
+        "import/no-named-as-default": "off",
+        "import/no-named-as-default-member": "off"
     }
 }
