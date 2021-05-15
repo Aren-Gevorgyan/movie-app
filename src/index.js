@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/app/App.jsx';
-import reportWebVitals from './reportWebVitals';
-import store from './store/store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
+import store from './store/store';
+import './index.css';
+import App from './components/app/App.jsx';
+
 
 ReactDOM.render(
 
@@ -18,10 +19,10 @@ ReactDOM.render(
     <
     App / >
     <
-    /Provider>    <
+    /Provider>     <
     /BrowserRouter >  <
-    /React.StrictMode > ,
-    document.getElementById('root')
+    /React.StrictMode >,
+    document.getElementById('root'),
 
 );
 
