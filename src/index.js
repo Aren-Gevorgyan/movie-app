@@ -18,7 +18,7 @@ ReactDOM.render(
     <
     App / >
     <
-    /Provider>   <
+    /Provider>    <
     /BrowserRouter >  <
     /React.StrictMode > ,
     document.getElementById('root')

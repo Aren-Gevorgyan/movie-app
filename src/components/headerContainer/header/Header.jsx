@@ -2,11 +2,11 @@ import style from './Header.module.css';
 import React from 'react';
 import logo from '../../../assets/images/logo.png';
 
-const Header = ({getInitialMovie}) => {
+const Header = ({getInitialMovies}) => {
     
     const getPopularMovie = () => {
         window.scrollTo( 0, 0);
-        getInitialMovie()
+        getInitialMovies()
     }
 
     return (

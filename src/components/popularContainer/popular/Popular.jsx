@@ -4,23 +4,23 @@ import MovieItems from './movieItems/MovieItems';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Loading from '../../../assets/loading/Loading';
 import NotResult from './notResult/NotResult';
-import {TYPE_POPULAR, TYPE_ByYEAR} from '../../../store/reduce/popularMovieReduce';
+import {TYPE_POPULAR, TYPE_BY_YEAR} from '../../../store/reduce/popularMovieReduce';
 
-const Popular = ({popularMovie, ...props}) => {
+const Popular = ({popularMovies, ...props}) => {
 
     const getContainerElement = useRef(null);
-    const ifNotMovies = popularMovie.length === 0;
+    const ifNotMovies = popularMovies.length === 0;
 
     useEffect(()=>{
         const setPaddingContainer = ifNotMovies? "230px" : "0px";
         getContainerElement.current.style.paddingBottom = setPaddingContainer;
     }, [ifNotMovies]);
 
-    const movieItems = arrayMovies(popularMovie);
+    const movieItems = arrayMovies(popularMovies);
     
     //by movie type return function
-    const getNewMovie = newMovieType(props.movieType, props.getPopularMovie,
-         props.getNewMovieByYear);
+    const getNewMovies = newMoviesType(props.moviesType, props.getPopularMovies,
+         props.getNewMoviesByYear);
     
     return (
         
@@ -38,8 +38,8 @@ const Popular = ({popularMovie, ...props}) => {
                 :
                 <InfiniteScroll
                       className={style.movie}             
-                      dataLength={popularMovie.length}
-                      next={()=> getNewMovie(props.page, props.dateFrom, props.dateTo)}
+                      dataLength={popularMovies.length}
+                      next={()=> getNewMovies(props.page, props.dateFrom, props.dateTo)}
                       hasMore={true}>  
                            {movieItems}
                            {props.loading? <Loading/>: ""}
@@ -49,19 +49,19 @@ const Popular = ({popularMovie, ...props}) => {
     )
 }
 
-function newMovieType(type, getPopularMovie, getNewMovieByYear){
+function newMoviesType(type, getPopularMovies, getNewMoviesByYear){
     switch(type){
         case TYPE_POPULAR:
-            return getPopularMovie;
-        case TYPE_ByYEAR:
-            return getNewMovieByYear;  
+            return getPopularMovies;
+        case TYPE_BY_YEAR:
+            return getNewMoviesByYear;  
         default:
             break;       
     };
 }
 
-function arrayMovies(popularMovie){
-    return popularMovie.map(movie => {
+function arrayMovies(popularMovies){
+    return popularMovies.map(movie => {
         return <MovieItems key={movie.id} 
                         title={movie.original_title}
                         date={movie.release_date}

@@ -3,14 +3,14 @@ import style from './Filter.module.css';
 import FilterForm from './filterForm/FilterForm';
 import Genres from './genres/Genres';
 
-const Filter = React.memo(({watchMovieByYear, page, genresItem}) => {
+const Filter = React.memo(({watchMoviesByYear, page, genresItem}) => {
 
     const [filterDialog, openFilterDialog] = useState(false);
     const [arrowIcon, setArrowIcon] = useState('fas fa-angle-right');
 
     const getFilterByYearValue = (value) => {
         //get new movie by year
-        watchMovieByYear(page, value.dateFrom, value.dateTo);
+        watchMoviesByYear(page, value.dateFrom, value.dateTo);
         //close filter dialog
         openFilterDialog(!filterDialog);
         //replace icon filter

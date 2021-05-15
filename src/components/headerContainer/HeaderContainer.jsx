@@ -1,9 +1,9 @@
 import {connect} from "react-redux";
-import {getInitialMovie} from "../../store/reduce/popularMovieReduce";
+import {getInitialMovies} from "../../store/reduce/popularMovieReduce";
 import Header from "./header/Header";
 
 const mapStateToProps = (state) => {
       return {}
 }
 
-export default connect(mapStateToProps, {getInitialMovie})(Header);
+export default connect(mapStateToProps, {getInitialMovies})(Header);

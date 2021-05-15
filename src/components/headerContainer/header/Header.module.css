@@ -34,6 +34,7 @@ nav {
 
 nav>ul {
     height: 30px;
+    cursor: pointer;
 }
 
 nav>ul>li {
@@ -74,6 +75,7 @@ nav>ul>li:hover ul {
     justify-content: center;
     list-style-type: none;
     font-weight: bold;
+    cursor: pointer;
     color: rgb(26, 25, 25);
 }
 

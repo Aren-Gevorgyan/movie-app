@@ -4,7 +4,7 @@ import style from './Genres.module.css';
 const Genres = React.memo(({genresItem}) => {
       
       const clickGenresItem = (e) => {
-          console.log(e.nativeEvent.srcElement.innerText);
+          console.log(e.div);
       }
 
       const getGenresItem = genresItem.map((value)=>{
