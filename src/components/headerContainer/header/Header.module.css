@@ -34,9 +34,11 @@ nav {
 
 nav>ul {
     height: 30px;
+    display: flex;
 }
 
 nav>ul>li {
+    margin-right: 24%;
     height: 30px;
     position: relative;
     color: white;

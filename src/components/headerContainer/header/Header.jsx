@@ -24,6 +24,7 @@ const Header = ({getInitialMovie}) => {
                      <li onClick={getPopularMovie}>Popular</li>
                    </ul>
                   </li>
+                  <li>Settings</li>
                 </ul>
               </nav>
             </div>
